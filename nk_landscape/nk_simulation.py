@@ -183,6 +183,6 @@ class NKModel:
 if __name__ == "__main__":
     # Choose from 'uniform', 'exp', 'zipf', or 'normal'.
     # input_csvs:simulation sequence csv files
-    nk_model = NKModel(seq_len=11, library="ACFGHIKLMNPQRSTVWY", seed="SFQRAQLSQHA",input_csv="rhla1_3_sequence/rhla1-3.csv",model='uniform')
+    nk_model = NKModel(seq_len=11, library="ACFGHIKLMNPQRSTVWY", seed="SFQRAQLSQHA",input_csv="rhla1_3_sequence/rhla1-3.csv",model='zipf')
     # The address of the saved file
-    nk_model.dataset_generation(directory="/Users/mac/Desktop/Epistatic-effect-linear-computation/rhla_data_simulation/rhla_test")
+    nk_model.dataset_generation(directory="/Users/mac/Desktop/Epistatic-effect-linear-computation/rhla_data_simulation/rhla13_zipf")

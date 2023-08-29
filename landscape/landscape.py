@@ -184,9 +184,8 @@ class Protein_Landscape:
         self.tokens = {
             x: y for x, y in zip(self.amino_acids, list(range(len(self.amino_acids))))
         }
-        np.random.shuffle(self.data)
-        self.sequences = self.data[:, 0][:2346]
-        self.fitnesses = self.data[:, 1][:2346]
+        self.sequences = self.data[:, 0]
+        self.fitnesses = self.data[:, 1]
 
         if seed_seq:
             self.seed_seq = seed_seq
@@ -881,7 +880,9 @@ class Protein_Landscape:
 
 
 if __name__ == "__main__":
-    # batch handle nk_landscape
+    test1 = Protein_Landscape(
+             csv_path="/Users/mac/Desktop/Epistatic-effect-linear-computation/rhla_data_simulation/rhla13_exp/K0/V0.csv").get_rs_ex()
+    #batch handle nk_landscape
     for i in range(11):
         test1 = Protein_Landscape(
             csv_path=f"/Users/mac/code/NK_Benchmarking/rhla13_exp/K{i}/V0.csv"
