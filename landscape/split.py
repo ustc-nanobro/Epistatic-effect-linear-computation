@@ -1,7 +1,7 @@
 import pandas as pd
 
 # 打开文本文件并逐行读取
-with open("/Users/mac/Desktop/Epistatic-effect-linear-computation/rhla_analysis/rhla1_3_normal_result/result.txt", "r") as file:
+with open("/Users/mac/Desktop/Epistatic-effect-linear-computation/rhla_analysis/rhla1_3_zipf_result/result.txt", "r") as file:
     lines = file.readlines()
 
 # 初始化一个空列表，用于存储数据
@@ -23,6 +23,6 @@ for line in lines:
 df = pd.DataFrame(data, columns=["Description", "Value"])
 
 # 保存 DataFrame 到 Excel 文件
-df.to_excel("/Users/mac/Desktop/Epistatic-effect-linear-computation/rhla_analysis/rhla1_3_normal_result/result.xlsx", index=False)
+df.to_excel("/Users/mac/Desktop/Epistatic-effect-linear-computation/rhla_analysis/rhla1_3_zipf_result/result.xlsx", index=False)
 
 print("Data saved to output.xlsx")
